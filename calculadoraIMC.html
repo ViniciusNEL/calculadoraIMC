@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="calculadoraIMC.css">
+  <title>Calculadora de IMC</title>
+</head>
+
+<body>
+  <form>
+    <div class="bmi-calculator">
+      <h1>Calcule seu IMC</h1>
+      <div class="bmi-calculator-peso">
+        <input id="sliderPeso" class="peso-slider" type="range" min="25" max="180" value="60" />
+        <p>Peso:
+          <input id="pesoOutput" class="inputNumber" type="number" value="60" min="25" max="180"
+            oninput="valorPeso(this.value)" />
+          <span>Kg</span>
+        </p>
+      </div>
+
+      <div class="bmi-calculator-altura">
+        <input id="altura-slider" class="altura-slider" type="range" min="25" max="180" value="60" />
+        <p>Altura:
+          <input id="altura-output" class="inputNumber" type="number" value="60" min="25" max="180"
+            oninput="valorAltura(this.value)" />
+          <span>cm</span>
+        </p>
+      </div>
+      <input id="btnCalcular" class="button" type="button" value="Calcular" onclick="calcular()" />
+
+      <div id="resultado">
+        <p> -- </p>
+      </div>
+    </div>
+  </form>
+
+
+
+  <script src="calculadoraIMC.js"></script>
+</body>
+
+</html>
